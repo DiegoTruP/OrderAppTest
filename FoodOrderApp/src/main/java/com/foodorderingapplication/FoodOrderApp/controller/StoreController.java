@@ -23,7 +23,7 @@ public class StoreController {
 	@GetMapping("/stores")
 	public ResponseEntity<StoreResponseDTO> getAllStores(
 			@RequestParam(defaultValue = "0") Integer pageNo,
-			@RequestParam(defaultValue = "5") Integer pageSize){
+			@RequestParam(defaultValue = "10") Integer pageSize){
 		
 		List<StoreDetails> storeDetailsList = storeService.getAllStoreDetails(pageNo,pageSize);
 		
